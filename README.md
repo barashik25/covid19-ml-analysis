@@ -16,9 +16,9 @@ Both datasets required substantial preprocessing: handling missing values (forwa
 | Dataset | Model | Accuracy | Precision | Recall | F1 | AUC-ROC |
 |---|---|---|---|---|---|---|
 | JRC | Random Forest | 0.9893 | 0.9905 | 0.9881 | 0.9893 | 0.9996 |
-| JRC | MLP | 0.7350 | 0.6615 | 0.9620 | — | 0.7602 |
+| JRC | MLP | 0.7142 | 0.6393 | 0.9822 | 0.7745 | 0.7461 |
 | GDSI | Random Forest | 0.9956 | 1.0000 | 0.6667 | 0.8000 | 1.0000 |
-| GDSI | MLP | — | 0.4000 | 0.6667 | 0.5000 | 0.7552 |
+| GDSI | MLP | 0.9825 | 0.4000 | 0.6667 | 0.5000 | 0.7552 |
 
 **Random Forest consistently outperformed MLP on both datasets.** On JRC, it correctly classified nearly all 1,683 test observations (only 8 false positives and 10 false negatives). MLP, in contrast, showed high recall but low precision, it tends to over-predict hospitalization, likely because neural networks are less suited to small tabular datasets compared to ensemble tree methods.
 
